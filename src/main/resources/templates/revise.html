@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta charset="UTF-8" name="viewport" content="width=device-width" />
+    <title>Home</title>
+    <link href="../css/Login.css" rel="stylesheet" />
+</head>
+
+<body>
+<ul>
+    <li><a href="/user/index" class="a1"><span>login</span></a></li>
+    <li><a href="/user/register" class="a2"><span>register</span></a></li>
+    <li><a href="/user/cancel" class="a3"><span>cancel</span></a></li>
+    <li><a href="/user/revise" class="a3"><span>update</span></a></li>
+</ul>
+<div id="login">
+    <h1>修改密码</h1>
+    <form method="post" action="#">
+        <input type="text" required="required" placeholder="用户名" name="account" id="account"></input>
+        <input type="password" required="required" placeholder="旧密码" name="oldPassword" id="oldPassword"></input>
+        <input type="password" required="required" placeholder="新密码" name="password" id="password"></input>
+        <button class="btn" type="button" id="btnPost">revise</button>
+    </form>
+</div> <br/>
+<div>
+</div>
+</body>
+<script src="../js/jquery.min.js"></script>
+<script>
+    $(function() {
+        //简单登录操作
+        $("#btnPost").click(function (e) {
+            $.ajax({
+                type : "POST",
+                url : "/user/updatePassword",
+                data : {
+                    "username" : $("#account").val(),
+                    "password" : $("#password").val(),
+                    "oldPassword" : $("#oldPassword").val(),
+                },
+                dataType : "json",
+                success : function(data) {
+                    if (data.code == 1) {
+                        alert("修改成功！");
+                    } else {
+                        alert(data.msg);
+                    }
+                }
+            });
+        });
+    });
+</script>
+</html>
