@@ -22,13 +22,11 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <processorPath useClasspath="true" />
-        <module name="spirngboot-login" />
-        <module name="spirngbootdemo" />
+        <module name="springboot-login" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
-      <module name="spirngboot-login" target="1.7" />
-      <module name="spirngbootdemo" target="1.7" />
+      <module name="springboot-login" target="1.8" />
     </bytecodeTargetLevel>
   </component>
 </project>

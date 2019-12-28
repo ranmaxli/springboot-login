@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/spirngboot-login.iml" filepath="$PROJECT_DIR$/spirngboot-login.iml" />
+      <module fileurl="file://$PROJECT_DIR$/springboot-login.iml" filepath="$PROJECT_DIR$/springboot-login.iml" />
     </modules>
   </component>
 </project>
