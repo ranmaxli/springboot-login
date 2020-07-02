@@ -9,3 +9,5 @@ spring.datasource.username=root
 spring.datasource.password=root
 
 3、数据库导入表数据 mysqldb.sql
+
+4、运行项目，访问地址：http://localhost:8080/user/index
